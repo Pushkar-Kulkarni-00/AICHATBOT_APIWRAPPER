@@ -1,0 +1,159 @@
+{
+  "orders": {
+    "ORD12345": {
+      "order_id": "ORD12345",
+      "status": "out_for_delivery",
+      "created_at": "2024-01-15",
+      "items": [
+        {
+          "name": "Fresh Blueberries",
+          "type": "perishable",
+          "quantity": 2,
+          "price": 12.99,
+          "condition": "good"
+        }
+      ],
+      "total": 12.99,
+      "shipping_address": "New York, USA",
+      "estimated_delivery": "2024-01-18",
+      "tracking_number": "TRK9876543",
+      "shipping_method": "express",
+      "payment_status": "completed",
+      "returnable": false,
+      "reason_not_returnable": "Perishable item"
+    },
+    "ORD12346": {
+      "order_id": "ORD12346",
+      "status": "delivered",
+      "created_at": "2024-01-10",
+      "items": [
+        {
+          "name": "Winter Jacket",
+          "type": "non_perishable",
+          "quantity": 1,
+          "price": 89.99,
+          "condition": "damaged"
+        }
+      ],
+      "total": 89.99,
+      "shipping_address": "Los Angeles, USA",
+      "delivered_at": "2024-01-14",
+      "tracking_number": "TRK9876544",
+      "shipping_method": "standard",
+      "payment_status": "completed",
+      "returnable": true,
+      "return_window_days": 30
+    },
+    "ORD12347": {
+      "order_id": "ORD12347",
+      "status": "processing",
+      "created_at": "2024-01-17",
+      "items": [
+        {
+          "name": "Electronics Bundle",
+          "type": "non_perishable",
+          "quantity": 1,
+          "price": 299.99,
+          "condition": "good"
+        }
+      ],
+      "total": 299.99,
+      "shipping_address": "London, UK",
+      "estimated_delivery": "2024-01-25",
+      "tracking_number": null,
+      "shipping_method": "international",
+      "payment_status": "completed",
+      "returnable": true,
+      "return_window_days": 30,
+      "tax_applicable": true,
+      "estimated_import_duty": "5-8%"
+    },
+    "ORD12348": {
+      "order_id": "ORD12348",
+      "status": "delivered",
+      "created_at": "2024-01-08",
+      "items": [
+        {
+          "name": "Coffee Beans",
+          "type": "non_perishable",
+          "quantity": 3,
+          "price": 15.99,
+          "condition": "good"
+        }
+      ],
+      "total": 47.97,
+      "shipping_address": "Chicago, USA",
+      "delivered_at": "2024-01-12",
+      "tracking_number": "TRK9876545",
+      "shipping_method": "standard",
+      "payment_status": "completed",
+      "returnable": true,
+      "return_window_days": 30
+    }
+  },
+  "countries": {
+    "USA": {
+      "tax_rate": "varies by state",
+      "customs_rules": "No customs for domestic shipments",
+      "delivery_days": 2,
+      "hazardous_restrictions": []
+    },
+    "UK": {
+      "tax_rate": "VAT 20%",
+      "customs_rules": "Post-Brexit customs apply",
+      "delivery_days": 5,
+      "hazardous_restrictions": ["batteries", "flammable_liquids"]
+    },
+    "Germany": {
+      "tax_rate": "VAT 19%",
+      "customs_rules": "EU regulations apply",
+      "delivery_days": 4,
+      "hazardous_restrictions": ["batteries"]
+    },
+    "Japan": {
+      "tax_rate": "10%",
+      "customs_rules": "Strict food import rules. Fresh items restricted.",
+      "delivery_days": 10,
+      "hazardous_restrictions": ["dairy", "fresh_meat", "flammable_liquids"]
+    },
+    "Australia": {
+      "tax_rate": "GST 10%",
+      "customs_rules": "Strict biosecurity. Fresh/perishable heavily restricted.",
+      "delivery_days": 12,
+      "hazardous_restrictions": ["fresh_produce", "dairy", "meat", "seeds"]
+    }
+  },
+  "perishable_items": [
+    "fresh_produce",
+    "frozen_products",
+    "dairy",
+    "meat",
+    "seafood",
+    "baked_goods"
+  ],
+  "return_policies": {
+    "non_perishable": {
+      "return_window_days": 30,
+      "condition_required": "unopened",
+      "eligible": true
+    },
+    "perishable": {
+      "return_window_days": 0,
+      "condition_required": "any",
+      "eligible": false,
+      "reason": "Cannot be returned after delivery"
+    },
+    "damaged": {
+      "return_window_days": 7,
+      "condition_required": "any",
+      "eligible": true,
+      "options": ["replacement", "refund"]
+    },
+    "missing": {
+      "return_window_days": 30,
+      "condition_required": "any",
+      "eligible": true,
+      "options": ["refund", "replacement"]
+    }
+  }
+}

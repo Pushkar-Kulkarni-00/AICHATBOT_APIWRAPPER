@@ -1,0 +1,101 @@
+.support-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-header {
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.welcome-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.welcome-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.support-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-height: 140px;
+}
+
+.support-card:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(16, 163, 127, 0.2);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.card-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.support-card:hover .card-name {
+  color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .support-card {
+    padding: 16px 12px;
+    min-height: 120px;
+  }
+
+  .card-icon {
+    font-size: 32px;
+  }
+
+  .card-name {
+    font-size: 12px;
+  }
+
+  .welcome-header h2 {
+    font-size: 22px;
+  }
+
+  .welcome-header p {
+    font-size: 14px;
+  }
+}
