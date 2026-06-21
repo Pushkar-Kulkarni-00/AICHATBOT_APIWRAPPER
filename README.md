@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # QuickCommerce AI - Project Manifest
 
 ## 📦 Deliverable Contents
@@ -367,3 +368,12 @@ If issues:
 **Built with:** Python, FastAPI, React, Ollama, JSON
 **No databases, no complex setup, no external APIs needed.**
 **100% local, 100% safe, 100% policy-compliant.**
+=======
+Chatbot using streamlit (API Wrapper)
+--
+To setup , give your openrouter api key in .env as `apikey={your api key}`
+
+To Run use
+
+`streamlit run main.py`
+>>>>>>> 47c22ef6fb6585ee57283dd3425fbd1102fde325
